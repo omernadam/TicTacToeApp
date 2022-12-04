@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void draw() {
-        textWinnerView.setText("Draw!");
+        textWinnerView.setText("Draw");
     }
 
 }
