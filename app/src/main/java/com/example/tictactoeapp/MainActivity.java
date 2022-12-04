@@ -107,4 +107,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         };
     }
 
+    private boolean checkWin() {
+        if (board[0] == board[1] && board[1] == board[2] && board[2] != 2) {
+            background.setImageResource(R.drawable.mark9);
+
+        } else if (board[3] == board[4] && board[4] == board[5] && board[5] != 2) {
+            background.setImageResource(R.drawable.mark8);
+
+        } else if (board[6] == board[7] && board[7] == board[8] && board[8] != 2) {
+            background.setImageResource(R.drawable.mark8);
+
+        } else if (board[0] == board[4] && board[4] == board[8] && board[8] != 2) {
+            background.setImageResource(R.drawable.mark1);
+
+        } else if (board[0] == board[3] && board[3] == board[6] && board[6] != 2) {
+            background.setImageResource(R.drawable.mark3);
+
+        } else if (board[1] == board[4] && board[4] == board[7] && board[7] != 2) {
+            background.setImageResource(R.drawable.mark4);
+
+        } else if (board[2] == board[5] && board[5] == board[8] && board[8] != 2) {
+            background.setImageResource(R.drawable.mark5);
+
+        } else if (board[2] == board[4] && board[4] == board[6] && board[6] != 2) {
+            background.setImageResource(R.drawable.mark2);
+
+        } else {
+            return false;
+        }
+        return true;
+    }
+
+    private void player1Wins() {
+        textWinnerView.setText("Player 1 Wins");
+    }
+
+    private void player2Wins() {
+        textWinnerView.setText("Player 2 Wins");
+    }
+
+    private void draw() {
+        textWinnerView.setText("Draw");
+    }
+
 }
